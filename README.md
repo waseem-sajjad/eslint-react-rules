@@ -6,13 +6,13 @@ A comprehensive collection of ESLint rules optimized for React applications, bun
 
 ```bash
 # Using npm
-npm install --save-dev eslint-react-rules
+npm install --save-dev eslint-plugin-jsx-a11y eslint-react-rules
 
 # Using yarn
-yarn add --dev eslint-react-rules
+yarn add --dev eslint-plugin-jsx-a11y eslint-react-rules
 
 # Using pnpm
-pnpm add -D eslint-react-rules
+pnpm add -D eslint-plugin-jsx-a11y eslint-react-rules
 ```
 
 ## Usage
@@ -22,12 +22,17 @@ To use the recommended configuration, add the following to your ESLint `eslint.c
 
 ```js
 import eslintReactRules from 'eslint-react-rules';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
 
 export default tseslint.config({
   extends: [
     // other configs...
     eslintReactRules.recommended,
   ],
+  plugins: {
+    // other plugins...
+    'jsx-a11y': jsxA11y,
+  }
   ...
 
 ```
@@ -39,6 +44,10 @@ module.exports = {
   extends: [
     // other configs...
     "eslint-react-rules/recommended",
+  ],
+  plugins: [
+    // other plugins...
+    "jsx-a11y",
   ],
   // Your other ESLint configuration
 };

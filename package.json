@@ -1,6 +1,6 @@
 {
   "name": "eslint-react-rules",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "description": "A collection of ESLint rules for React 19+ projects that help enforce best practices and coding standards.",
   "main": "index.cjs",
